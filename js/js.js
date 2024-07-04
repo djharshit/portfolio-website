@@ -8,7 +8,7 @@ document.addEventListener("visibilitychange", function () {
 
 let dataTyping = {
   target: "typing-text",
-  text: '["Cloud Computing","Machine Learning","Python Programming"]',
+  text: '["Cloud Computing","DevOps Engineering","Python Programming","Machine Learning"]',
   delay: "500",
 };
 let dataTyping2 = {
@@ -67,14 +67,15 @@ window.onload = function () {
     if (dataTyping.text) {
       new textType(el[i], JSON.parse(dataTyping.text), dataTyping.delay);
     }
-  } for (let i = 0; i < el2.length; i++) {
+  }
+  for (let i = 0; i < el2.length; i++) {
     if (dataTyping2.text) {
       new textType(el2[i], JSON.parse(dataTyping2.text), dataTyping2.delay);
     }
   }
 };
-navLinks = document.querySelectorAll("ul li a")
-section = document.querySelectorAll(".navE")
+navLinks = document.querySelectorAll("ul li a");
+section = document.querySelectorAll(".navE");
 
 window.onscroll = () => {
   section.forEach((sec) => {
@@ -86,7 +87,9 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove("active");
-        document.querySelector("ul li a[href*=" + id + "]").classList.add("active");
+        document
+          .querySelector("ul li a[href*=" + id + "]")
+          .classList.add("active");
       });
     }
   });
